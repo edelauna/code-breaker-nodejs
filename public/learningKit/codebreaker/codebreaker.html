@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <title>Code Breaker</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="codebreaker.css">
+        <script src="codebreaker.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header ><h1 class="title">Code Breaker</h1></header>
+            <div class="main">
+                <h2><span id='dig1'>?</span><span id='dig2'>?</span><span id='dig3'>?</span><span id='dig4'>?</span></h2>
+                <div class="btn-group">
+                    <div class="alert hide" id="alert">
+                        An alert!
+                    </div>
+                    <div class="form-group">
+                        <label for="pInputField">Guess</label>
+                        <input type="number" min="0" class="form-control" id="pInputField" autocomplete="off">
+                    </div>
+                    <button type="button" class="btn btn-problem" id="submitPrompt" data-req="submit">Submit a guess</button>
+                </div>
+                <table class="table hide">
+                    <thead>
+                            <th>Guess</th><th>Result</th>
+                    </thead>
+                    <tbody id="results">
+
+                    </tbody>
+                </table>
+            </div>
+
+            </div>
+            <footer class="footer"><p>Author: Elliott de Launay, 2019 - Style Reference: <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p></footer>
+          </div> 
+    </body>
+</html>

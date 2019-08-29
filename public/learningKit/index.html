@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Webpage HTML document for Lab 3.
+  Author: Amirhossein Chinaei
+  For: EECS 1012, York University, Lassonde School of Engineering 
+  Modified: 24-Jan-19 by Elliott de Launay -->
+<html lang="En">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title> EECS1012: Lab 3 - My Kit </title>
+  <!-- in Ex1, add a link tag here to connect it to the css file -->
+  <link rel="stylesheet" href="assets/css/myLearningKit.css" type="text/css" />
+  
+  <!--JQuery was loaded as I wanted to become familiar with it and have a lot of previous experience with JS-->
+  <script src="vendor/js/jquery/jquery-3.3.1.min.js"></script>
+
+  <!-- in Ex2, add a script tag here to connect it to the js file -->
+  <script src="assets/js/myLearningKit.js"></script>
+  
+  <!--To maintain layering I segrated data into a JS file as an array
+  It was done this way to allow for localhost editing (without a webserver) to prevent cross site scripting errors-->
+  <script src="assets/data/data.js"></script>
+
+  <!-- Used to beautify code-->
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  
+  
+  
+</head>
+<body>
+
+  <header>
+    <h1 style="display: none;" class="title"> My Computational Thinking Kit </h1>
+	<nav class="btn-group">
+	  
+	</nav>
+  </header>
+  
+  <!--Gets filled by JQuery onClick from buttons in nav
+  Error check requires that this div is empty-->
+  <div id="problem" class="problem">
+  </div>
+
+  <!--The following 3 columns are very dependant on flowchart, js, and another ids if changed
+  need to update assets/data/data.js as well-->
+  <div class="column1 design">
+    <!-- in Ex3, add an attribute onclick to the following input-->
+	  <input class="check" type="checkbox" name="flowchart"/> Design
+    <!-- in Ex5, add attributes onclick and ondblclick to the following img-->
+ 	  <img id="flowchart" class ="zoomEnabled" src="null" alt="null"/>
+  </div>
+  
+  <div class="column2 jsSolution">
+	  <input class="check" type="checkbox" name="js"/> JavaScript Solution
+    <pre id="js" class="prettyprint" style="display: none;">
+      
+    </pre>
+    <!-- prev version of leader -->
+    <!--<iframe id="js" height="90%" src="null" alt="null"></iframe>-->
+  </div>
+  
+  <div class="column3 otherSolution">
+	  <input class="check" type="checkbox" name="another"/> Another Solution
+	  <pre id="another" class="prettyprint" style="display: none;">
+  </div>
+
+  <!-- Modal - used instead of promot() -->
+  <div class="prompt fade hide" id="prompt">
+    <div class="prompt-dialog">
+    <div class="prompt-content">
+        <div class="prompt-header">
+            <h5 class="prompt-title">Prompt</h5>
+            <button type="button" class="close" id="closePrompt">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="prompt-body" id="promptBody">
+            <div class="alert hide" id="alert">
+                An alert!
+            </div>
+            <div class="btn-group" id="inputGroup">
+                <div class="form-group">
+                    <label for="pInputField">Input a number</label>
+                    <input type="number" min="0" class="form-control" id="pInputField" autocomplete="off">
+                </div>
+            </div>
+        </div>
+        <div class="prompt-footer">
+            <button class="btn btn-dismiss" data-req="dismiss-prompt">Close</button>
+            <button type="button" class="btn btn-problem" id="submitPrompt" data-req="submit">Submit</button>
+        </div>
+    </div>
+    </div>
+</div>
+
+  <footer>(c) Author of this web page: <span>Elliott de Launay</span> </footer>
+</body>
+</html>

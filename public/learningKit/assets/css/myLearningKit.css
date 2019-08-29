@@ -1,0 +1,340 @@
+/* Webpage CSS document for Lab 3.
+  Author: Amirhossein Chinaei
+  For: EECS 1012, York University, Lassonde School of Engineering 
+  Modified: 21-Jan-19 by Elliott de Launay */
+	body{
+		padding: 2em;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		font-size: 1rem;
+		font-weight: 400;
+		line-height: 1.5;
+		color: #212529;
+		text-align: left;
+		background-color: #fff;
+	}
+	
+	html{
+			font-family: sans-serif;
+			line-height: 1.15;
+			-webkit-text-size-adjust: 100%;
+			-webkit-tap-highlight-color: transparent;
+	}
+body pre {
+	text-align: justify;
+}
+
+div {
+	border:1px solid grey;
+	margin-top:20px;
+	display: block;
+}
+
+button:not(:disabled){
+	cursor: pointer;
+}
+button{
+	-webkit-appearance: button;
+	text-transform: none;
+	overflow: visible;
+	margin: 0;
+	font-family: inherit;
+}
+h5{
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+h1{
+	line-height: 1.2;
+}
+.footer a:hover, .footer a:focus{
+	color: #007bff;
+	text-decoration: underline;
+}
+.footer a{
+	font-weight: 600;
+	color: #495057;
+}
+
+.main {
+	text-align: left;
+}
+
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+
+
+#problem {
+	/* in Ex1, add one line here to specify the width of 
+	this element relative to the width of the viewport */ 
+	width: 90vw;
+	margin:auto;
+	margin-top:20px;
+	height:80px;
+	text-align:left;
+	color:red;
+	font-family:Luminary, cursive;
+	font-size:15px;
+	padding-left:20px;
+	padding-right:20px;
+}
+
+footer{
+	margin-top:20px;
+	text-align:center;
+	font-size:.875rem;
+	background: #f7f7f7;
+	color: #6c757d;
+}
+
+/* Responsive layout - makes the three columns stack 
+on top of each other instead of next to each other */
+  img {
+    width: 100%;
+    height: auto;
+	margin-top:5px;
+	padding: 2px;
+	}
+/* in Ex1, add one line here such that the img does not display */
+	img[src="null"], iframe[src="null"]{
+		display: none;
+	}
+
+  [class*="column"] { 
+     width: 100%;
+     display:inline-block;
+		 height:60vh;
+		 overflow: auto;
+  }
+
+  header nav button{ 
+	  width:18%;
+	  font-size:8px;
+  }
+	.title{
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    font-weight: 300;
+    font-size: 3rem;
+}
+/* assign this class .active to buttons when there are in use */
+.btn-problem:not(:disabled):not(.disabled).active, .btn-problem:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #0062cc;
+    border-color: #005cbf;
+}
+.btn-problem:disabled{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff; 
+}
+.btn-dismiss:not(:disabled):not(.disabled).active, .btn-dismiss:not(:disabled):not(.disabled):active{
+    color: #fff;
+    background-color: #545b62;
+    border-color: #4e555b;
+}
+.btn-problem:hover{
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+    text-decoration: none;
+}
+.btn-problem{
+    color:#fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-dismiss:hover{
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+    text-decoration: none;
+}
+.btn-dismiss{
+    color:#fff;
+    background-color: #62757d;
+    border-color: #6c757d;
+}
+.btn{
+    display: inline-block;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.btn:disabled{
+    opacity: .65;
+}
+.btn-group{
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -15px 0;
+    border: solid #f8f9fa;
+    border-width: .2rem 0 0;
+    width: 100%;
+}
+
+/* Used for the prompt window */
+.prompt {
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1072;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+}
+.hide{
+    display: none;
+}
+.prompt-title{
+    margin: 1rem 0 0 0;
+    line-height: 1.5;
+}
+.fade{
+    transition: opacity .15s linear;
+    background: rgba(0, 0, 0, 0.5);
+}
+.prompt-open{
+    overflow: hidden;
+}
+.close{
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+}
+.prompt-header, .close{
+    padding: 1rem 1rem;
+}
+.prompt-dialog {
+    transform: none;
+    transition: transform .3s ease-out;
+    position: relative;
+    width: auto;
+    margin: .5rem;
+    pointer-events: none;
+}
+.prompt-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.prompt-header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+.prompt-body{
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+.prompt-footer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+.prompt-footer>:not(:last-child) {
+    margin-right: .25rem;
+}
+.prompt-footer>:not(:first-child){
+    margin-left: .25rem;
+}
+
+/* Used for inputs */
+.form-group{
+    margin-bottom: 1rem;
+}
+input[type=checkbox]{
+	box-sizing: border-box;
+	padding: 0;
+	margin-top: .3rem;
+}
+label{
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.alert{
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.message{
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+.error{
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+@media screen and (min-width:600px) {
+  [class*="column"] {
+    width:32%;
+  }
+  
+  header nav button{ 
+	width:9%;
+	font-size:1.2vw;
+	}
+	.btn-group{
+		padding: 1.5rem;
+		margin-right: 0;
+		margin-left: 0;
+		border-width: .2rem;
+}
+.prompt-dialog{
+		max-width: 500px;
+		margin:  1.75rem auto;
+}
+}
+

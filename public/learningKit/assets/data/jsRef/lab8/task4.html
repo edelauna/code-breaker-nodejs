@@ -1,0 +1,48 @@
+<!-- JavaScript Examples, EECS 1012 Fall 2019 -->
+<!-- (CC) Michael S. Brown and Elliott de Launay-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="task4.js"></script>
+  <meta charset="utf-8">
+  <title> Task 4 </title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href="lab8elliottdelaunay.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <!-- Create a paragraph with id mydata -->
+  <div id="box">
+  <p id="mydata">Roll Dice</p>
+  <p> <button class="btn btn-problem" onclick="myFunction();">Roll Dice</button></p>
+</div>
+
+<!-- Modal - used instead of prompt() Not used for Lab 8-->
+<div class="prompt fade hide" id="prompt">
+  <div class="prompt-dialog">
+  <div class="prompt-content">
+      <div class="prompt-header">
+          <h5 class="prompt-title">This page says</h5>
+          <button type="button" class="close" id="closePrompt">
+              <span>&times;</span>
+          </button>
+      </div>
+      <div class="prompt-body" id="promptBody">
+          <div class="alert hide" id="alert">
+              DOUBLES!
+          </div>
+          <div class="btn-group" id="inputGroup">
+              <div class="form-group">
+                  <label for="pInputField">Input a number</label>
+                  <input type="number" min="0" class="form-control" id="pInputField" autocomplete="off">
+              </div>
+          </div>
+      </div>
+      <div class="prompt-footer">
+          <button class="btn btn-dismiss" id="dismiss-prompt">Close</button>
+          <button type="button" class="btn btn-problem" id="submitPrompt" data-req="submit">Submit</button>
+      </div>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

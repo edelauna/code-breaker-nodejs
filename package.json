@@ -1,0 +1,31 @@
+{
+  "name": "EECS1012",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "concurrently --kill-others \"node ./bin/www\" \"npm run server\"",
+    "dev-start": "SET DEBUG=* | nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node ./server/code_breaker_server",
+    "dev": "concurrently --kill-others \"npm run dev-start\" \"nodemon ./server/code_breaker_server\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://edelauna@dev.azure.com/edelauna/EECS1012/_git/EECS1012"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "http-errors": "^1.7.2",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3"
+  }
+}

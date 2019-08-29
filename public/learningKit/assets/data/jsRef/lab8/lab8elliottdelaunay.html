@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <title>Lab 8: Elliott de Launay</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="lab8elliottdelaunay.css">
+        <!-- No JS required for index -->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header ><h1 class="title">Lab 8: Elliott de Launay</h1></header>
+            <div class="main">
+                <p>Index for Tasks 1 - 6</p>
+                <div class="btn-group">
+                    <a href="task1.html" target="_blank" class="btn btn-problem">Task 1</a>
+                    <a href="task2.html" target="_blank" class="btn btn-problem">Task 2</a>
+                    <a href="task3.html" target="_blank" class="btn btn-problem">Task 3</a>
+                    <a href="task4.html" target="_blank" class="btn btn-problem">Task 4</a>
+                    <a href="task5.html" target="_blank" class="btn btn-problem">Task 5</a>
+                    <a href="task6.html" target="_blank" class="btn btn-problem">Task 6</a>
+                </div>
+            </div>
+            <!-- Modal - used instead of prompt() Not used for Lab 8-->
+            <div class="prompt fade hide" id="prompt">
+                <div class="prompt-dialog">
+                <div class="prompt-content">
+                    <div class="prompt-header">
+                        <h5 class="prompt-title">Prompt</h5>
+                        <button type="button" class="close" id="closePrompt">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="prompt-body" id="promptBody">
+                        <div class="alert hide" id="alert">
+                            An alert!
+                        </div>
+                        <div class="btn-group" id="inputGroup">
+                            <div class="form-group">
+                                <label for="pInputField">Input a number</label>
+                                <input type="number" min="0" class="form-control" id="pInputField" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prompt-footer">
+                        <button class="btn btn-dismiss" data-req="dismiss-prompt">Close</button>
+                        <button type="button" class="btn btn-problem" id="submitPrompt" data-req="submit">Submit</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <footer class="footer"><p>Author: Elliott de Launay, 2019 - Style Reference: <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a></p></footer>
+          </div> 
+    </body>
+</html>
